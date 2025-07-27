@@ -30,7 +30,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"content\":\"user4\",\n    \"createdByName\":\"password\",\n    \"url\":\"www.google.com\",\n    \"type\":\"PLAIN_TEXT\"\n}"
+							"raw": "{\n    \"content\":\"novi content ##B##\",\n    \"createdByName\":\"darija\"\n}"
 						},
 						"url": {
 							"raw": "http://localhost:8080/api/v1/post",
@@ -72,7 +72,7 @@
 							"raw": "{\n    \"content\":\"user4\",\n    \"createdByName\":\"password\",\n    \"url\":\"www.google.com\",\n    \"type\":\"PLAIN_TEXT\"\n}"
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/v1/post",
+							"raw": "http://localhost:8080/api/v1/post/rabbit",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -81,7 +81,8 @@
 							"path": [
 								"api",
 								"v1",
-								"post"
+								"post",
+								"rabbit"
 							]
 						}
 					},
@@ -331,10 +332,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"url\": \"www.darija.com\"\n}"
+							"raw": "{\n    \"url\": \"https://www.darija.com\"\n}"
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/v1/provideLink/1",
+							"raw": "http://localhost:8080/api/v1/post/provideLink/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -343,6 +344,7 @@
 							"path": [
 								"api",
 								"v1",
+								"post",
 								"provideLink",
 								"1"
 							]
@@ -393,8 +395,17 @@
 								"type": "text"
 							}
 						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"content\":\"Neki comment Content 2\"\n    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": "http://localhost:8080/api/v1/comment",
+							"raw": "http://localhost:8080/api/v1/comment/respondToPost/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -403,7 +414,9 @@
 							"path": [
 								"api",
 								"v1",
-								"comment"
+								"comment",
+								"respondToPost",
+								"1"
 							]
 						}
 					},
@@ -422,7 +435,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"content\": \"content komentara na komentar\"\n}",
+							"raw": "{\n    \"content\": \"content komentara na komentar 3\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -500,8 +513,18 @@
 								"type": "text"
 							}
 						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/Users/ilija.balen/Downloads/Userimage.png"
+								}
+							]
+						},
 						"url": {
-							"raw": "http://localhost:8080/api/v1/comment",
+							"raw": "http://localhost:8080/api/v1/user/1/upload",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -510,7 +533,9 @@
 							"path": [
 								"api",
 								"v1",
-								"comment"
+								"user",
+								"1",
+								"upload"
 							]
 						}
 					},
