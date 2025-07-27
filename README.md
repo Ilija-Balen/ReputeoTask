@@ -65,3 +65,15 @@ There are other methods like `findAllByNameOfAUser` implemented, which can be di
 
 ---
 
+## Adding comments
+use this api
+http://localhost:8080/api/v1/comment/respondToPost/{idPost}
+for body just add content with or without userId
+Same goes for adding comment to comment, just different ednpoint
+http://localhost:8080/api/v1/comment/respondToComment/{idPost}
+
+## Adding user
+http://localhost:8080/api/v1/user/create
+adding photo 
+http://localhost:8080/api/v1/user/1/upload
+with body form-data key:file value: upload from pc
